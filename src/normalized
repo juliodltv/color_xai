@@ -1,0 +1,28 @@
+# import numpy as np
+
+# shap_values = [np.array([[0.5, -2.6, -0.038], [-0.115, -2.26, -0.43]]), np.array([[0.5, -2.6, -0.038], [-0.8, -2.26, -0.43]])]
+
+# k=0
+# print(shap_values[k])
+# sum_elements = np.abs(shap_values[k]).sum(0)
+# print(sum_elements)
+# true = sum_elements > 1
+# print(true)
+# # print(shap_values[k]/sum_elements if sum_elements > 1 else shap_values[k])
+# quit()
+
+import numpy as np
+
+# Tus valores SHAP originales
+shap_values = np.array([
+    [ 0.5,   -2.6,   -0.038],
+    [-0.115, -2.26,  -0.43]
+])
+
+# La suma de los valores absolutos por columna
+sum_abs_shap_values = np.array([0.615, 4.86, 0.468])
+
+# Normaliza dividiendo por el máximo valor absoluto en cada columna
+max_abs_shap_values = np.max(np.abs(shap_values), axis=0)
+normalized_shap_values = shap_values / max_abs_shap_values
+print(normalized_shap_values)
