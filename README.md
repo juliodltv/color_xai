@@ -81,7 +81,3 @@ python3 src/main_svm.py
 *   **Julio De La Torre-Vanegas** (CIMAT, Zacatecas)
 *   **Jose Torres-Jimenez** (CINVESTAV-Tamaulipas)
 *   **Hector Cardona-Reyes** (CIMAT, Zacatecas)
-
-## Funding
-
-This project was supported by **CONAHCyT/SECIHTI** (Project CF-2023-I-1014).
